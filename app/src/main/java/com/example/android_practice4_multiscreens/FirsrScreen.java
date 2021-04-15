@@ -48,6 +48,7 @@ public class FirsrScreen extends AppCompatActivity {
     }
 
     public static void fillData(){
+        POIList.clear();
         POIList.add(new POI("Ellora caves",countryList[0], "ie1", "ie2", "Ellora caves are the great!"));
         POIList.add(new POI("Mehrangarh fort",countryList[0], "im1", "im2", "Mehrangarh fort is the great!"));
         POIList.add(new POI("Ranki vaav",countryList[0], "ir1", "ir2", "Ranki vaav is the great!"));
@@ -84,6 +85,7 @@ public class FirsrScreen extends AppCompatActivity {
         @Override
         public void onNothingSelected(AdapterView<?> parent) {
             if(parent.getId() == R.id.spCountry){
+                tempPOIList.clear();
                 fillTempPOIList(countryList[0]);
 
                 ArrayAdapter aa2 = new ArrayAdapter(getBaseContext(), android.R.layout.simple_spinner_dropdown_item, tempPOIList);
